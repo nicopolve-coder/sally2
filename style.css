@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+}
+
+.centro {
+    display: block;
+    margin: auto;
+}
+
+.contenitore {
+  display: flex;
+  align-items: center;      /* centra verticalmente */
+}
+
+.testo {
+  flex: 1;                  /* occupa lo spazio disponibile */
+  text-align: center;       /* centra il testo */
+}
+
+.contenitore img {
+  width: 200px;
+  height: auto;
+}
+
+/* Stile base */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #333333; /* grigio scuro principale */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+/* Main e strofe */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.strofa {
+    background-color: #ffffff;
+    border-left: 6px solid #333333; /* linea grigio scuro */
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+/* Icona musicale in alto a sinistra */
+.strofa::before {
+    content: "♪";
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #333333;
+}
+
+/* Testo versi */
+.strofa p {
+    margin: 0 0 12px 0;
+}
+
+.strofa p:last-child {
+    margin-bottom: 0;
+}
+
+/* Evidenziazione primo verso di ogni strofa */
+.strofa p:first-child {
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #e2e2e2;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555555;
+}
+
+/* Stile responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    .strofa {
+        padding: 15px 20px;
+    }
+    .strofa::before {
+        font-size: 20px;
+        top: 8px;
+        left: 8px;
+    }
+}

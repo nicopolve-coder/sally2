@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Recensioni</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+  </style>
+  </head>
+
+  <body>
+
+  <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Testo 
+                ▼
+            </button>
+            <div class="dropdown-content">
+                <a href="motivazione.html">Motivazione della scelta</a>
+                <a href="analisi.html">Analisi della canzone</a>
+                <a href="riscrittura.html">Riscrittura</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Recensione sito
+            </button>
+            <div class="dropdown-content">
+                <a href="visualizza-recensioni.html">Visualizza recensioni</a>
+                <a href="recensione-sito.html">Lascia una recensione</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .contenitore {
+        width: 100%;
+        max-width: 600px;
+        padding: 30px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .recensione {
+        background: #ffffff;
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .recensione p {
+        margin: 0 0 10px 0;
+      }
+
+      .autore {
+        font-size: 14px;
+        color: #666;
+        text-align: right;
+      }
+    </style>
+    </head>
+
+    <body>
+
+      <div class="contenitore">
+        <h1>Le nostre recensioni</h1>
+
+        <div id="lista-recensioni"></div>
+      </div>
+
+      <script>
+        const recensioni = [
+          {
+            testo: "Servizio eccellente e sito molto chiaro.",
+            autore: "Maria"
+          },
+          {
+            testo: "Ho trovato tutte le informazioni di cui avevo bisogno.",
+            autore: "Luca"
+          },
+          {
+            testo: "Sito semplice e ben organizzato. Consigliato.",
+            autore: "Giulia"
+          }
+        ];
+
+        const contenitore = document.getElementById("lista-recensioni");
+
+        recensioni.forEach(rec => {
+          const div = document.createElement("div");
+          div.className = "recensione";
+
+          div.innerHTML = `
+        <p>"${rec.testo}"</p>
+        <div class="autore">– ${rec.autore}</div>
+      `;
+
+          contenitore.appendChild(div);
+        });
+      </script>
+
+    </body>
+
+</html>
